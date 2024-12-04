@@ -1,5 +1,6 @@
 package com.senai.aula01_classe_atributo_metodos.Exercicio2;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Aluno {
@@ -25,5 +26,16 @@ public class Aluno {
         System.out.println("nota atual do Aluno "+nota);
         nota = novaNota;
         System.out.println("nota atualizada Aluno "+nota);
+    }
+
+
+    public boolean equals() {
+
+        return nota >= 6;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(nota);
     }
 }
