@@ -60,7 +60,24 @@ public class Main {
 
                     break;
                 case 4:
+                {
+                    System.out.println("Escolha o  nome do produto para remover:");
+                    System.out.println(estoque.toString());
+                    String nProduto =scanner.nextLine();
+                    for (int i = 0; i < estoque.size(); i++) {
+                        if (estoque.get(i).nomeProduto.equals(nProduto)){
+                            System.out.println("produto "+estoque.get(i).nomeProduto+" removido com sucesso");
+                            estoque.remove(i);
+                            System.out.println(estoque.getLast());
+                            break;
+                        }
 
+                    }
+
+
+
+
+                }
                     break;
                 case 5:
                     System.out.println("Digite o nome do produto para buscar:");
