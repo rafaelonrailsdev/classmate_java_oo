@@ -1,4 +1,4 @@
-package com.senai.aula01_classe_atributo_metodos.pessoa;
+package com.senai.aula01_classe_atributo_metodos.objetos.pessoa;
 
 import java.util.Objects;
 

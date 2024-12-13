@@ -9,38 +9,45 @@ public class Main {
 
     public static void main(String[] args) {
         int option = 0;
-        do {
-            System.out.printf("""
+try {
+    do {
+        System.out.printf("""
                     --- Gerenciador de Tarefas ---
                     1. Adicionar Tarefa
                     2. Listar Tarefas
                     3. Marcar Tarefa como conlcluída 
                     4. Remover Tarefa
                     5. Sair
-                    Escolha uma opção
+                    Escolha uma opção: \t
                     """);
 
-            option = scanner.nextInt();
-            scanner.nextLine();
-            switch (option) {
-                case 1:
-                    todo();
-                    break;
-                case 2:
-                    listarTarefa();
-                    break;
-                case 3:
-                    done();
-                    break;
-                case 4:
-                    listarTarefa();
-                    deletar();
-                    break;
-                case 5:
-                    break;
-            }
-        } while (option != 5);
+        option = scanner.nextInt();
+        scanner.nextLine();
 
+        switch (option) {
+            case 1:
+                todo();
+                break;
+            case 2:
+                listarTarefa();
+                break;
+            case 3:
+                done();
+                break;
+            case 4:
+                listarTarefa();
+                deletar();
+                break;
+            case 5:
+                System.out.println("fim do programa.");
+                break;
+        }
+    } while (option != 5);
+
+} catch (Exception e) {
+    throw new RuntimeException(e);
+
+}
 
     }
 
@@ -55,13 +62,13 @@ public class Main {
 
     static void listarTarefa() {
         for (Tarefa tarefa : listaDeTarefas) {
-            System.out.println(tarefa);
+            System.out.print(listaDeTarefas.indexOf(tarefa)+" | "+tarefa+"\n");
         }
     }
     static void done(){
 
         for (Tarefa tarefa: listaDeTarefas){
-            System.out.println((listaDeTarefas.indexOf(tarefa)+1)+" - "+tarefa);
+            System.out.println((listaDeTarefas.indexOf(tarefa)+1)+" | "+tarefa);
 
         }
         System.out.println("escolha uma tarefa como concluída: ");
