@@ -7,25 +7,43 @@ public class Menu {
 
     public static void toMenu(){
         Scanner scan = new Scanner(System.in);
-        int choice ;
+        String choice ;
+
+
         String menu = """
-            MAIN MENU
-            1 -  SIGN UP EMPLOYEE
-            2 -  SHOW EMPLOYEE
-            3 -  EXIT
-            ----------------------
-            CHOOSE A OPTION:
-            """;
+        +----------------------+
+        |      MAIN MENU       |
+        +----------------------+
+        | 1 - SIGN UP EMPLOYEE |
+        | 2 - SHOW EMPLOYEE    |
+        | 3 - EXIT             |
+        +----------------------+
+        CHOOSE AN OPTION: """;
+
         do{
             System.out.printf(menu);
-            choice = scan.nextInt();
+            choice = scan.nextLine();
             switch (choice){
-                case 1-> ManageEmployee.addEmployee();
-                case 2-> ManageEmployee.showEmployee();
-                case 3-> System.out.println("end");
-                default -> System.out.println("wrong choice");
+                case "1":ManageEmployee.addEmployee(); break;
+                case "2": ManageEmployee.showEmployees(); break;
+                case "3":
+                    try {
+                        System.out.printf("exit");
+                        System.out.printf(".");
+                        Thread.sleep(300);
+                        System.out.printf(".");
+                        Thread.sleep(300);
+                        System.out.printf(".");
+                        Thread.sleep(300);
+
+
+                    } catch (InterruptedException e) {
+                         e.printStackTrace();
+                    }
+                    return;
+                default : System.out.println("wrong choice");
             }
-        }while (choice!=3);
+        }while (!choice.equals("3"));
 
     }
 
