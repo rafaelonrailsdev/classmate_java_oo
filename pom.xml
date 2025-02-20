@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.senai</groupId>
-    <artifactId>aula_java_poo</artifactId>
+    <artifactId>classemate_java_oo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
