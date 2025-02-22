@@ -17,7 +17,11 @@ public abstract class Product {
         this.amount = amount;
     }
     public static void showStock(){
+        if (listProduct.isEmpty()){
+            System.out.println("Stock is empty");
+        }else {
             System.out.println(listProduct.toString().replaceAll(",",""));
+    }
     }
 
     public String getName() {return name;}

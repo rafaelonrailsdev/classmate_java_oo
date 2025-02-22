@@ -10,19 +10,15 @@ import java.util.Scanner;
 
             System.out.println("""
                 1 - add new product
-                2 - to update
-                3 - delete
-                4 - see the inventory
-                5 - exit
+                2 - see the inventory
+                3 - exit
                 """);
 
             option = scan.nextLine();
             switch (option){
-                case "1": CRUD.create();break;
-                case "2": CRUD.update();break;
-                case "3": CRUD.delete(); break;
-                case "4": CRUD.read(); break;
-                case "5":  try {System.out.printf("exit");
+                case "1": CR.create();break;
+                case "2": CR.read(); break;
+                case "3":  try {System.out.printf("exit");
                     for (int i =0; i<3; i++){
                         System.out.printf(".");
                         Thread.sleep(300);
