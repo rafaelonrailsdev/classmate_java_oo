@@ -1,0 +1,3 @@
+Crie um sistema com a classe Paciente, contendo nome e idade.
+Depois, crie subclasses PacienteParticular (com custo da
+consulta) e PacienteConvenio (com desconto no custo)

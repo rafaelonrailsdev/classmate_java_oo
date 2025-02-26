@@ -1,0 +1,3 @@
+Crie uma classe Pedido com número do pedido e valor total.
+Depois, crie subclasses PedidoOnline (com taxa de entrega) e
+PedidoPresencial (com desconto para pagamentos à vista)

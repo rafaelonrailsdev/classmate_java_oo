@@ -1,0 +1,5 @@
+Crie um sistema de controle de estoque para um
+supermercado. Ele deve ter uma classe Produto com nome,
+preço e quantidade. Em seguida, crie subclasses Alimento e
+Eletronico, onde alimentos têm data de validade e eletrônicos
+têm voltagem.

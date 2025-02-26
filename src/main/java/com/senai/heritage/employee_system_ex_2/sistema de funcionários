@@ -1,0 +1,4 @@
+Crie um sistema que tenha uma classe Funcionário com nome e
+salário. Depois, crie subclasses Professor e Coordenador, onde
+professores possuem disciplina e coordenadores possuem
+equipe de professores.
