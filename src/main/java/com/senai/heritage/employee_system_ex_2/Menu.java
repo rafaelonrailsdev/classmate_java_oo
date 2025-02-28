@@ -1,7 +1,5 @@
 package com.senai.heritage.employee_system_ex_2;
 
-import com.senai.heritage.inventory_control_ex_1.CR;
-
 import java.util.Scanner;
 
 public class Menu {
@@ -11,21 +9,22 @@ public class Menu {
        do {
 
            System.out.println("""
-               1 - 
-               2 - 
+               Main menu
+               1 - add new employee
+               2 - employee's list
                3 - exit
                """);
 
            option = scan.nextLine();
            switch (option){
-               case "1": break;
-               case "2":  break;
-               case "3":  try {System.out.printf("exit");
+               case "1": Employee.create(); break;
+               case "2": Show.read();
+               case "3": try {System.out.printf("exit");
                    for (int i =0; i<3; i++){
                        System.out.printf(".");
                        Thread.sleep(300);
-                   }return ;
-               } catch (InterruptedException e) {e.printStackTrace();} break;
+                   }
+               } catch (InterruptedException e) {e.printStackTrace();} return;
                default:
                    System.out.println("wrong choice");
            }
