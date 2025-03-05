@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Teacher extends Employee{
     String discipline;
+    static String department;
     public Teacher(String name, double salary, String discipline,String department){
         super(name,salary,department);
         this.discipline = discipline;
@@ -18,7 +19,7 @@ public class Teacher extends Employee{
         String discipline;
         String lengthTeacher;
         int length;
-        String department;
+
         do {
             System.out.println("quantity of new teachers: ");
             lengthTeacher = scan.nextLine();
@@ -37,12 +38,12 @@ public class Teacher extends Employee{
                     """);
                         discipline = scan.nextLine();
                         switch (discipline){
-                            case "1"-> discipline = "Levantamento de requisitos";
-                            case "2"-> discipline = "Arquitetura de redes com iot";
-                            case "3"-> discipline = "Programação back end";
-                            case "4"-> discipline = "Programação front end";
+                            case "1": discipline = "Levantamento de requisitos";break;
+                            case "2": discipline = "Arquitetura de redes com iot";break;
+                            case "3": discipline = "Programação back end";break;
+                            case "4": discipline = "Programação front end";break;
 
-                            default -> System.out.println("wrong choice.");
+                            default : System.out.println("wrong choice.");return;
                         }
                         System.out.println("""
                                 Department:
@@ -56,6 +57,7 @@ public class Teacher extends Employee{
                             case "4"-> department = "sebrae";
                             default -> System.out.println("wrong choice.");
                         }
+
                         try {
                             System.out.printf("loading");
                             for (int j =0; j<3; j++){
@@ -66,15 +68,16 @@ public class Teacher extends Employee{
                         Teacher teacher = new Teacher( name,salaryFinal,discipline,department);
                         Employee.employeeArrayList.add(teacher);
                         Employee.teacherArrayList.add(teacher);
+
                         switch (department){
-                            case "sesi"-> Director.departamentSesi.add(teacher);
-                            case "senai"-> Director.departamentSenai.add(teacher);
-                            case "senat"-> Director.departamentSenat.add(teacher);
-                            case "sebrae"-> Director.departamentSebrae.add(teacher);
+                            case "sesi"-> Teacher.teacherArrayListSesi.add(teacher);
+                            case "senai"-> Teacher.teacherArrayListSenai.add(teacher);
+                            case "senat"-> Teacher.teacherArrayListSenat.add(teacher);
+                            case "sebrae"-> Teacher.teacherArrayListSebrae.add(teacher);
                         }
-                    } catch (NumberFormatException e) {System.out.println("wrong choice.");}
+                    } catch (NumberFormatException e) {System.out.println("wrong choice.");Menu.menu();}
                 }
-            } catch (NumberFormatException e){System.out.println("wrong choice.");}
+            } catch (NumberFormatException e){System.out.println("wrong choice.");Menu.menu();}
             return;
         }while (true);
     }
@@ -86,15 +89,6 @@ public class Teacher extends Employee{
         );
     }
 
-    public static void showTeacher() {
-        if (Employee.teacherArrayList.isEmpty()) {
-            System.out.println("No teachers available.");
-        } else {
-            System.out.println("Teachers List:");
-            for (Teacher teacher : Employee.teacherArrayList) {
-                System.out.println(teacher);
-            }
-        }
-    }
+
 }
 

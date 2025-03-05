@@ -23,8 +23,8 @@ public class Menu {
                    for (int i =0; i<3; i++){
                        System.out.printf(".");
                        Thread.sleep(300);
-                   }
-               } catch (InterruptedException e) {e.printStackTrace();} return;
+                   }System.exit(0);
+               } catch (InterruptedException e) {e.printStackTrace();}
                default:
                    System.out.println("wrong choice");
            }

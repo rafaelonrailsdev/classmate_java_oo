@@ -8,6 +8,19 @@ public abstract class Employee {
     static ArrayList<Employee> employeeArrayList = new ArrayList<>();
     static ArrayList<Teacher> teacherArrayList = new ArrayList<>();
     static  ArrayList<Director> directorArrayList = new ArrayList<>();
+    static  ArrayList<Director> directorArrayListSesi
+ = new ArrayList<>();
+    static ArrayList<Teacher> teacherArrayListSesi = new ArrayList<>();
+    static ArrayList<Teacher> teacherArrayListSenai = new ArrayList<>();
+    static  ArrayList<Director> directorArrayListSenai = new ArrayList<>();
+    static ArrayList<Teacher> teacherArrayListSenat = new ArrayList<>();
+    static  ArrayList<Director> directorArrayListSenat = new ArrayList<>();
+    static ArrayList<Teacher> teacherArrayListSebrae = new ArrayList<>();
+    static  ArrayList<Director> directorArrayListSebrae = new ArrayList<>();
+
+
+
+
     String name;
     double salary;
     String departament;
@@ -42,16 +55,5 @@ public abstract class Employee {
                 "employee{name='%s', salary=%.2f, department='%s'}",
                 name, salary, departament
         );
-    }
-
-    public static void showEmployee() {
-        if (employeeArrayList.isEmpty()) {
-            System.out.println("No employee available.");
-        } else {
-            System.out.println("employee List:");
-            for (Employee employee : employeeArrayList) {
-                System.out.println(employee);
-            }
-        }
     }
 }

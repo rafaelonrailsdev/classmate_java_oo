@@ -42,11 +42,11 @@ static ArrayList<Teacher> departamentSebrae = new ArrayList<>();
                     """);
                         departament = scan.nextLine();
                         switch (departament){
-                            case "1"-> departament = "sesi";
-                            case "2"-> departament = "senai";
-                            case "3"-> departament = "senat";
-                            case "4"-> departament = "sebrae";
-                            default -> System.out.println("wrong choice.");
+                            case "1": departament = "sesi";break;
+                            case "2": departament = "senai";break;
+                            case "3": departament = "senat";break;
+                            case "4": departament = "sebrae";break;
+                            default : System.out.println("wrong choice.");return;
                         }
                         try {
                             System.out.printf("loading");
@@ -55,13 +55,14 @@ static ArrayList<Teacher> departamentSebrae = new ArrayList<>();
                                 Thread.sleep(300);
                             }
                             System.out.println("\nSaved\n");
-                        }catch (InterruptedException e) {e.printStackTrace();}
+                        }catch (InterruptedException e) {e.printStackTrace();Menu.menu();}
                         Director director = new Director(name,salaryFinal,departament);
                         Employee.employeeArrayList.add(director);
                         Employee.directorArrayList.add(director);
-                    } catch (NumberFormatException e) {System.out.println("wrong choice.");}
+                        if (departament.equals("sesi")){Employee.directorArrayListSesi.add(director);} else if (departament.equals("senai")) {Employee.directorArrayListSenai.add(director);}else if (departament.equals("senat")) {Employee.directorArrayListSenat.add(director);}else if (departament.equals("sebrae")) {Employee.directorArrayListSebrae.add(director);}
+                    } catch (NumberFormatException e) {System.out.println("wrong choice.");Menu.menu();}
                 }
-            } catch (NumberFormatException e){System.out.println("wrong choice.");}
+            } catch (NumberFormatException e){System.out.println("wrong choice.");Menu.menu();}
             return;
         }while (true);
     }
