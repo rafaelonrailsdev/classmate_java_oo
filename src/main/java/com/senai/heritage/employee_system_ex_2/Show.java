@@ -9,25 +9,12 @@ public class Show {
     static Scanner scan = new Scanner(System.in);
 
 
-    public static void fljkdjsl(){
-        String option;
-        do {
-            System.out.println("""
-                employee's list
-                1 - Employee
-                2 - Exit to menu
-                """);
-            option = scan.nextLine();
-            switch (option){
-                case "1": read(); break;
-                case "2": Menu.menu();
-                default: System.out.println("wrong choice");
-            }
-        }while (true);
 
     }
     public static void read() {
         Scanner scan = new Scanner(System.in);
+    public static void read(Scanner scan) {
+
         System.out.println("""
                 1 - show directors
                 2 - show directors and their respective teams
@@ -35,7 +22,7 @@ public class Show {
         String choice = scan.nextLine();
         switch (choice){
             case "1":
-                if (Employee.directorArrayList.isEmpty()) {System.out.println("No directors available.");Director.newDirector();}
+                if (Employee.directorArrayList.isEmpty()) {System.out.println("No directors available.");Director.newDirector(scan);}
                 else {System.out.println("Directors List:");
                     System.out.println(Employee.directorArrayList);}break;
             case "2":
@@ -46,7 +33,7 @@ public class Show {
         }
     }
     public static void showTeamWithDirector(){
-        if (Employee.directorArrayList.isEmpty()||Employee.teacherArrayList.isEmpty()||Employee.employeeArrayList.isEmpty()) {System.out.println("empty.");Employee.create();}
+        if (Employee.directorArrayList.isEmpty()||Employee.teacherArrayList.isEmpty()||Employee.employeeArrayList.isEmpty()) {System.out.println("empty.");Employee.create(scan);}
         for (int i = 0; i < Employee.directorArrayListSesi.size(); i++) {
             if (Employee.directorArrayListSesi.get(i).departament.equals("sesi")) {
                 System.out.println("Sesi :");for (Director director : Employee.directorArrayListSesi) {System.out.println(director);}}

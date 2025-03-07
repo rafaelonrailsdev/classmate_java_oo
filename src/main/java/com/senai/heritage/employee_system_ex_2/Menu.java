@@ -17,8 +17,8 @@ public class Menu {
 
            option = scan.nextLine();
            switch (option){
-               case "1": Employee.create(); break;
-               case "2": Show.read();
+               case "1": Employee.create(scan); break;
+               case "2": Show.read(scan);break;
                case "3": try {System.out.printf("exit");
                    for (int i =0; i<3; i++){
                        System.out.printf(".");

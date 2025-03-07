@@ -29,8 +29,7 @@ public abstract class Employee {
         this.salary = salary;
         this.departament = departament;
     }
-    public static void create(){
-        Scanner scan = new Scanner(System.in);
+    public static void create(Scanner scan){
         String option;
         while (true){
             System.out.println("""
@@ -41,7 +40,7 @@ public abstract class Employee {
                     """);
             option = scan.nextLine();
             switch (option){
-                case "1": Director.newDirector(); break;
+                case "1": Director.newDirector(scan); break;
                 case "2": Teacher.newTeacher();  break;
                 case "3": Menu.menu();
                 default:

@@ -16,8 +16,8 @@ static ArrayList<Teacher> departamentSebrae = new ArrayList<>();
         super(name,salary,departament);
 
     }
-    public static void newDirector(){
-        Scanner scan = new Scanner(System.in);
+    public static void newDirector(Scanner scan){
+
         String name = null;
         String salary;
         double salaryFinal = 0;
