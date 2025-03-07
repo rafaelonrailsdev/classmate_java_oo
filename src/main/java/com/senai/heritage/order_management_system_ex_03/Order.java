@@ -1,6 +1,15 @@
 package com.senai.heritage.order_management_system_ex_03;
-//Crie uma classe Pedido com número do pedido e valor total.
+
 public class Order {
     String orderId;
-    String totalValue;
+    double totalValue;
+
+    public Order(String orderId, double totalValue) {
+        this.orderId = orderId;
+        this.totalValue = totalValue;
+    }
+    public void showOrderDetails() {
+        System.out.println("Order ID: " + orderId);
+        System.out.println("Total Value: " + totalValue);
+    }
 }
