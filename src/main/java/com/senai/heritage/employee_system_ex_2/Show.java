@@ -10,9 +10,6 @@ public class Show {
 
 
 
-    }
-    public static void read() {
-        Scanner scan = new Scanner(System.in);
     public static void read(Scanner scan) {
 
         System.out.println("""
