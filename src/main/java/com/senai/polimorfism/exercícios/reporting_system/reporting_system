@@ -1,0 +1,3 @@
+Crie uma classe base Relatorio com o método gerar(). Depois,
+implemente subclasses para gerar relatórios PDF, CSV e JSON,
+cada um com uma implementação diferente.

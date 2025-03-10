@@ -1,4 +1,4 @@
-package com.senai.polimorfism.example;
+package com.senai.abstracao.example1_animal;
 
 public class Elefante extends Animal{
     // Construtor

@@ -1,4 +1,4 @@
-package com.senai.polimorfism.example2;
+package com.senai.abstracao.example2_payment_employee;
 
 public class Freelancer extends Pagamentos{
     private double valueProject;

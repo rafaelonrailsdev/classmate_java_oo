@@ -1,21 +1,20 @@
-package com.senai.polimorfism.example;
+package com.senai.abstracao.example1_animal;
 
-public class Cachorro extends Animal{
-
+public class Gato extends Animal {
     // Construtor
-    Cachorro(String nome) {
+    Gato(String nome) {
         super(nome);
     }
 
     // Implementando o método abstrato fazerSom
     @Override
     void fazerSom() {
-        System.out.println(nome + " faz au au");
+        System.out.println(nome + " faz miau");
     }
 
     // Implementando o método abstrato seMover
     @Override
     void seMover() {
-        System.out.println(nome + " está andando alegremente");
+        System.out.println(nome + " está se movendo silenciosamente");
     }
 }

@@ -1,4 +1,4 @@
-package com.senai.polimorfism.example;
+package com.senai.abstracao.example1_animal;
 //06/03/2025
 public abstract class Animal {
     String nome;
