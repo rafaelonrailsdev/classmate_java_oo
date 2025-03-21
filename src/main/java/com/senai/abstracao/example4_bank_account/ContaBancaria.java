@@ -6,7 +6,8 @@ public abstract class ContaBancaria {
 
     public ContaBancaria(String titular, double saldo){
         this.saldo = saldo;
-    this.titular = titular;}
+    this.titular = titular;
+    }
     abstract void aplicarTaxaMensal();
      void consultarSaldo(){
          System.out.println("Titular: "+titular+" Saldo "+ saldo);
