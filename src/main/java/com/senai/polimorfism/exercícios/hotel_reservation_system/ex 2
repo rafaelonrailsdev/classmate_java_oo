@@ -1,0 +1,5 @@
+Exercício 2: Sistema de Reservas de Hotel:
+
+Crie uma classe base Reserva e subclasses ReservaSimples e
+ReservaVIP, onde cada uma tem uma forma diferente de
+calcular o custo total.
