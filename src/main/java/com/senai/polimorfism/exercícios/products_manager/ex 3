@@ -1,0 +1,6 @@
+Exercício 3: Gestão de Produtos:
+
+Crie uma classe Produto e implemente diferentes tipos de
+produtos (ProdutoFisico, ProdutoDigital, ProdutoServico) onde
+cada um calcula seu preço final com base em impostos
+diferentes.
